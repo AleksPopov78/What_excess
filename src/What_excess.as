@@ -12,10 +12,12 @@ package
 	
 	public class What_excess extends Sprite
 	{
+		
 		public function What_excess()
 		{
 		addEventListener(Event.ADDED_TO_STAGE, onAdded);
 		}
+		
 		protected function onAdded(evetn:Event):void
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, onAdded);
@@ -23,5 +25,6 @@ package
 			Facade.getInstance().registerCommand ("start", StartCommand);
 			Facade.getInstance().sendNotification("start", this);
 		}
+		
 	}
 }
